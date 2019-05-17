@@ -1,0 +1,82 @@
+<!-- Titel -->
+<div class="col-md-12">
+  <p class="form_heading">Nach Projekt suchen:</p>
+  <form class="form">
+    <div class="form-group m-t-40 row">
+      <div class="col-10 col-md-6">
+        <input class="form-control" name="description" type="text" placeholder="Titel oder Projektnummer" id="search-input" [(ngModel)]="searchvalue">
+      </div>
+      <div class="col-2">
+        <button type="submit" (click)="search()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Fehlermeldungen -->
+<div *ngIf="invalidsearch" class="col-md-12">
+  <p style="color:red; margin-top: 3rem;" class="brand_content_section-name">Bitte geben Sie etwas ein.</p>
+ </div>
+<div *ngIf="noresults" class="col-md-12">
+  <p style="color:red; margin-top: 3rem;" class="brand_content_section-name">Keine Projekte zu Ihrer Suchanfrage gefunden.</p>
+</div>
+
+<!-- Suchergebnisse -->
+<div *ngIf="results" class="col-md-10">
+  <div class="brand_content_section">
+    <div class="brand_content_section--header">
+      <p *ngIf="this.counter > 1" class="brand_content_section-name"> {{this.counter}} Projekte gefunden:</p>
+      <p *ngIf="this.counter === 1" class="brand_content_section-name"> 1 Projekt gefunden:</p>
+    </div>
+
+    <div *ngFor="let project of searchresults" class="brand_content_section--list-data">
+      <div class="content_section_list">
+        <div class="content_section_list--date">
+          <div class="project_description">
+            <label class="project_description-header">{{project.title}}</label>
+            <div class="project_description_list">
+
+              <label>Project Nr:</label>
+              <span>{{project.id}}</span>
+            </div>
+            <div class="project_description_list">
+              <label>Start-Datum:</label>
+              <span>{{project.init_date}}</span>
+            </div>
+            <div class="project_description_list">
+              <label>End-Datum:</label>
+              <span>{{project.end_date}}</span>
+            </div>
+            <div class="project_description_list">
+              <label>Beschreibung:</label>
+              <span>{{project.description}}</span>
+            </div>
+            <div class="project_description_list">
+              <label>Organisation:</label>
+              <span>{{project.organisation_name}}</span>
+            </div>
+            <div class="project_description_list">
+              <label>Projekt-Manager:</label>
+              <span>{{project.manager}}</span>
+            </div>
+            <div class="project_description_list">
+              <label>Projekt-Typ:</label>
+              <span>{{project.type_name}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="content_section_list--meter">
+          <div class="content_section_list-version">
+            <button id="open_project" class="brand_content_section-createbtn" type="button" name="button">
+              <a href="/project/project-single/{{project.id}}"><label>Projekt öffnen</label></a>
+              <i class="zmdi zmdi-caret-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class=" content_section_list-border"></div>
+    </div>
+  </div>
+</div>

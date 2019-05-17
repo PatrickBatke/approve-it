@@ -1,0 +1,33 @@
+<form class="form-horizontal form-material" id="loginform" action="index.html">
+  <!--<h3 class="box-title m-b-20">Sign In</h3>-->
+  <div class="form-group">
+    <div class="col-xs-12">
+        <i class="fas fa-user authicon"></i>
+      <input class="form-control" type="text" required="" placeholder="Benutzername" name="name" [(ngModel)]="user.username"> </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12">
+        <i class="fas fa-envelope authicon"></i>
+      <input class="form-control" type="email" required="" placeholder="Email" name="email" [(ngModel)]="user.email"> </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12">
+        <i class="fas fa-unlock authicon"></i>
+      <input class="form-control" type="password" required="" placeholder="Passwort" name="password" [(ngModel)]="user.password"> </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12">
+        <i class="fas fa-unlock authicon"></i>
+      <input class="form-control" type="password" required="" placeholder="Passwort wiederholen" name="c_password" [(ngModel)]="user.c_password"> </div>
+  </div>
+  <div class="form-group">
+      <p>Indem du auf „Registrieren“ klickst, stimmst du unseren <a href="">Nutzungsbedingungen</a> zu. 
+        In unserer <a href="">Datenrichtlinie</a> erfährst du, wie wir deine Daten erfassen, verwenden und teilen. 
+        Unsere <a href="">Cookie-Richtlinie</a> erklärt, wie wir Cookies und ähnliche Technologien verwenden.</p>
+  </div>
+  <div class="form-group text-center m-t-20">
+    <div class="col-xs-12">
+      <button (click)="onClick()" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" id="authbutton" type="submit">Registrieren</button>
+    </div>
+  </div>
+</form>

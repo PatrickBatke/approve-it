@@ -1,0 +1,102 @@
+<div class="container-fluid">
+  <div class="row page-titles">
+    <div class="col-md-6 col-8 align-self-center">
+      <h3 class="text-themecolor mb-0 mt-0">Projekte</h3>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Übersicht</a></li>
+          <li class="breadcrumb-item active">Projektliste</li>
+        </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card card-outline-theme">
+        <div class="card-header">
+          <h4 class="mb-0 text-white">Projektliste</h4>
+        </div>
+        <div class="card-body">
+          <form class="form">
+            <div class="form-body">
+              <h3 class="card-title">Projekt auswählen</h3>
+              <hr>
+              <div class="row pt-3">
+                <div class="col">
+                  <div class="form-group mb-0">
+                    <div class="brand_content_section--header">
+                      <button class="createproject btn-hover" (click)="createProjectLink()" type="button" name="createProjectBtn">Neues Projekt anlegen <i class="zmdi zmdi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-md-12">
+              <div *ngFor="let project of projects" class="brand_content_section--list-data mt-4">
+                <div class="row mb-2">
+                  <div class="col-12 pb-3">
+                    <label class="project_description-header">{{ project.title }}</label>
+                    <hr>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-4">
+                      <div class="content_section_list">
+                    <img src="{{ project.picture }}" class="img-fluid w-100" alt="Project image">
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="content_section_list">
+                      <div class="content_section_list--date">
+                        <div class="project_meta">
+                          <div class="project_meta_list">
+                            <label>Projekt Nr:</label>
+                            <span>{{ project.id }}</span>
+                          </div>
+                          <div class="project_meta_list">
+                            <label>Start-Datum:</label>
+                            <span>{{ project.init_date }}</span>
+                          </div>
+                          <div class="project_meta_list">
+                            <label>End-Datum:</label>
+                            <span>{{ project.end_date }}</span>
+                          </div>
+                          <div class="project_meta_list">
+                            <label>Organisation:</label>
+                            <span>{{ project.organisation_name }}</span>
+                          </div>
+                          <div class="project_meta_list">
+                            <label>Projekt Manager:</label>
+                            <span>{{ project.manager }}</span>
+                          </div>
+                          <div class="project_meta_list">
+                            <label>Projekttyp:</label>
+                            <span>{{ project.type_name }}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content_section_list--meter"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content_section_list">
+                      <div class="content_section_list--date">
+                        <div class="project_description_list">
+                          <label>Beschreibung:</label>
+                          <br>
+                          <br>
+                          <span>{{ project.description }}</span>
+                        </div>
+                      </div>
+                      <div class="content_section_list-version">
+                          <button (click)="openProjectDetails(project.id)" type="button" name="openProjectDetails" class="btn-hover mt-2">Projektdetails<i class="fas fa-info-circle"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

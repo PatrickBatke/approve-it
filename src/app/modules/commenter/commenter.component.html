@@ -1,0 +1,28 @@
+<!-- <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(this.file_url)' height="100%" width="100%">
+<!--         <object data="sanitizer.bypassSecurityTrustResourceUrl(this.file_url)" type="application/pdf">
+            <embed [src]="sanitizer.bypassSecurityTrustResourceUrl(this.file_url)" type="application/pdf" />
+        </object> 
+</iframe>  -->
+<div class="col-md-12" style="margin-left: 40%;">
+    <form class="form">
+        <div class="form-group m-t-40 row">
+            <!--  <label for="comment-input" class="col-2 col-form-label">Kommentar hinzufügen</label>
+            <div class="col-6 col-md-6">
+                <input [(ngModel)]="comment" class="form-control" type="text" placeholder="..." id="comment-input" name="comment">
+            </div> -->
+            <div class="col-3 col-md-3">
+                <button (click)="addcomment()">Kommentar Hinzufügen <i style="margin-left: .2rem" class="fas fa-plus"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- <div style="margin-left: 13%;" class="col-md-12">
+        <h3 *ngIf="commentadded" class="box-title">Kommentare</h3>
+        <br>
+    <ul>
+        <li *ngFor="let comment of comments">{{comment.comment}}  <a (click)="deletecomment(comment.id)" class="btn"><i class="fa fa-trash-o"></i></a></li>
+    </ul>
+</div> -->
+<pdf-viewer id="canv" [src]="file_url" [render-text]="true" style="display: block;">
+</pdf-viewer>
+

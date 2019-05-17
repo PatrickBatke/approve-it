@@ -1,0 +1,182 @@
+<div class="main_page_content">
+  <header class="topbar is_stuck">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+      <!-- ============================================================== -->
+      <!-- Logo -->
+      <!-- ============================================================== -->
+      <div class="navbar-header" style="position: fixed;">
+      <a class="navbar-brand" href="index.html">      
+          <b>
+            <img class="dark-logo" src="../assets/images/logo.svg" width="70%" />
+          </b>
+        </a> 
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Logo -->
+      <!-- ============================================================== -->
+      <div class="navbar-collapse">
+        <!-- ============================================================== -->
+        <!-- toggle and nav items -->
+        <!-- ============================================================== -->
+
+        <!-- ============================================================== -->
+        <!-- User profile and search -->
+        <!-- ============================================================== -->
+        <ul class="navbar-nav my-lg-0" id="header_user">
+          <!--  <li class="nav-item hidden-sm-down">
+            <form class="app-search">
+              <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a> </form>
+          </li> -->
+          <!-- <li>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </li> -->
+          <li class="nav-item">
+              <div class="switch">
+                  <label>
+                      <i class="icon-sun pr-1"></i><input class="theme-switch notxtselect hide" type="checkbox" checked="checked"><span class="lever"></span><i class="icon-moon pl-1"></i>
+                  </label>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="../assets/images/users/1.jpg" alt="user" class="profile-pic">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+              <ul class="dropdown-user">
+                <li>
+                  <div class="dw-user-box">
+                    <div class="u-img">
+                      <img src="../assets/images/users/1.jpg" alt="user">
+                    </div>
+                    <div class="u-text">
+                      <h4>Martin Neuherz</h4>
+                      <p class="text-muted">martin.neuherz@neuherz.at</p>
+                      <a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Profilansicht</a>
+                    </div>
+                  </div>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="ti-user"></i> Profil</a></li>
+                <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                <li><a href="#"><i class="ti-email"></i> Nachrichten</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="ti-settings"></i> Einstellungen</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Ausloggen</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="flag-icon flag-icon-at"></i>
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right animated bounceInDown">
+              <a class="dropdown-item" href="#">
+                <i class="flag-icon flag-icon-it"></i> Italy
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="flag-icon flag-icon-fr"></i> French
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="flag-icon flag-icon-us"></i> English
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="left-sidebar" *ngIf="edited">
+
+    <!-- Sidebar scroll-->
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+      <div class="scroll-sidebar" style="overflow: hidden; width: auto; height: 100%;">
+        <!-- User profile -->
+        <div class="user-profile">
+          <!-- User profile image -->
+          <div class="profile-img"> <img src="../assets/images/users/1.jpg" alt="user"> </div>
+          <!-- User profile text-->
+          <div class="profile-text"> <a href="#" class="dropdown-toggle link u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Martin Neuherz <span class="caret"></span></a>
+            <div class="dropdown-menu animated flipInY">
+              <a href="#" class="dropdown-item"><i class="ti-user"></i> Profilverwaltung</a>
+              <!-- <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a> -->
+              <a href="#" class="dropdown-item"><i class="ti-email"></i> Nachrichten</a>
+              <!-- <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Settings</a>  -->
+              <div class="dropdown-divider"></div><a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Ausloggen</a>
+            </div>
+          </div>
+        </div>
+        <!-- End User profile text-->
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav active">
+          <ul id="sidebarnav" class="in">
+           <!--  <li class="nav-small-cap">PERSONAL</li> -->
+           <!-- <span> class="label label-rounded label-success">5</span> 
+          <i class="mdi mdi-gauge"></i>-->
+            <li class="nav-devider"></li>
+            <li class="nav-small-cap">PROJEKTE</li>
+            <li class="active">
+              <a class="has-arrow" href="#" aria-expanded="false" [routerLink]="['/dashboard']"><span class="hide-menu dashboard">Übersicht</span></a>
+              <ul aria-expanded="true" class="collapse in">
+                <li><a [ngClass]="router.url === '/project/project-overview' ? 'active': ''" [routerLink]="['/project/project-overview']">Projektliste</a></li>
+                <li><a [ngClass]="router.url === '/project/project-create' ? 'active': ''" [routerLink]="['/project/project-create']">Neues Projekt anlegen</a></li>
+                <li><a [ngClass]="router.url === '/project/project-search' ? 'active': ''" [routerLink]="['/project/project-search']">Projekt suchen</a></li>
+              </ul>
+            </li>
+            <!--
+            <li class="nav-devider"></li>
+            <li class="nav-small-cap">SUPPORT</li>
+            <li class="active">
+              <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Apps</span></a>
+              <ul aria-expanded="true" class="collapse in">
+                <li class="active"><a href="#" class="active" [routerLink]="['/calendar']">Calendar</a></li>
+                <li><a href="#" [routerLink]="['/chat']">Chat app</a></li>
+                <li><a href="#" [routerLink]="['/support']">Support Ticket</a></li>
+                <li><a href="#" [routerLink]="['/contact-grid']">Contact Grid</a></li>
+              </ul>
+            </li>
+            <li class="nav-devider"></li>
+            <li class="nav-small-cap">DOCUMENTS</li>
+            <li>
+              <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Symbols</span></a>
+              <ul aria-expanded="false" class="collapse">
+                <li><a href="widget-apps.html">Upload Symbol</a></li>
+                <li><a href="widget-data.html">Manage Symbols</a></li>
+              </ul>
+            </li>
+            <li class="nav-devider"></li>
+            <li class="nav-small-cap">SETTINGS</li>
+            <li>
+              <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Organisation</span></a>
+              <ul aria-expanded="false" class="collapse in">
+                <li><a href="#" [routerLink]="['/data-center']">Data Center</a></li>
+              </ul>
+            </li>
+            -->
+          </ul>
+        </nav>
+        
+        <!-- End Sidebar navigation -->
+      </div>
+      <div class="slimScrollBar" style="background: rgb(220, 220, 220); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; left: 1px; height: 1096.34px;"></div>
+      <div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; left: 1px;"></div>
+    </div>
+    <!-- End Sidebar scroll-->
+    <a href="https://www.neuherz.at/de/" target="_blank"><img class="neuherz-logo" src="../assets/images/NP_Logo_2018_final_quer.png" /></a>
+
+  </aside>
+
+  <div class="page-wrapper content_section_pages">
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+
+    <router-outlet></router-outlet>
+    <!-- <app-authentication></app-authentication> -->
+
+  </div>
+</div>

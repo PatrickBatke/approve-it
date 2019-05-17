@@ -1,0 +1,194 @@
+/* Benutzer CSS */
+.project_description-header {
+    color: #be1521;
+}
+
+@media (max-width: 1010px) {
+  .project_description-header {    
+    width: 64%;
+  }
+}
+
+.brand_content_section--header {
+  justify-content: flex-end;
+}
+
+/* ============================================================================================= */
+
+#open_project {
+  margin-left: 0 !important;
+}
+
+#open_project label {
+  margin-bottom: 0 !important;
+  margin-left: 1rem !important;
+}
+
+.side_bar {
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 13px 0 rgba(128, 128, 128, 0.45);
+  padding: 25px;
+}
+
+.side_bar-filter {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.side_bar-filter-brand {
+  padding-bottom: 10px;
+}
+
+.side_bar-checkbox-label {
+  color: #7a8897;
+}
+
+.side_bar-checkbox-subheader {
+  font-size: 11px;
+  color: #54667a;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ul li:before {
+    content: '✓';
+  } */
+
+.brand_content_section-name {
+  font-size: 22px;
+  margin-top: 22px;
+}
+
+.brand_content_section--header, .brand_content_section--buttons {
+  display: flex;
+}
+
+.brand_content_section--header button {
+  /* background-color: #328638; */
+  border: none;
+  color: #fff;
+  width: auto;
+  border-radius: 6px;
+}
+
+.brand_content_section--header button label {
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.brand_content_section--buttons button {
+  height: 36px;
+  background-color: #fff;
+  border: none;
+  color: #7a8897;
+}
+
+.brand_content_section--list-data {
+  height: auto;
+  background-color: #ffffff;
+}
+
+
+
+.content_section_list--date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content_section_list--meterdiagram {
+  padding-bottom: 20px;
+}
+
+.content_section_list-moreinfo {
+  padding-bottom: 11px;
+}
+
+.content_section_list-moreinfo button {
+  background-color: #53ce63;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.content_section_list-moreinfo button i {
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+.content_section_list-version button {
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.content_section_list-version button i {
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+.project_description {
+  padding-left: 21px;
+  line-height: 15px;
+}
+
+.project_description-header {
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+.projects_image_preview {
+  height: 172px;
+}
+
+.project_meta_list {
+  color: #7a8897;
+  line-height: 1.3rem;
+}
+
+.project_description_list {
+  color: #7a8897;
+}
+
+.project_description_list label {
+  font-weight: normal;
+}
+
+.project_description_list-fileimage {
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+}
+
+.project_description_list-contactimg {
+  width: 20px;
+  height: 19px;
+  padding: 0px;
+}
+
+.project_meta_list *, .project_description_list * {
+  display: inline;
+  margin-right: 3px;
+}
+
+.project_description_list span::after {
+  content: "  ";
+  clear: both;
+  display: block;
+}
+
+.brand_content_section-createbtn label {
+  color: #fff;
+}

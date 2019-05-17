@@ -1,0 +1,38 @@
+.login-layout {
+  background-image: url("../../../assets/images/background/approval-background.jpg");
+  background-position: center;
+  height: 100vh;
+}
+
+.login-register {
+  height: auto;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, .9) !important;
+}
+
+.login-logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  width: 50%;
+}
+
+.card-body {
+  height: 540px;
+}
+
+.neuherz-logo {
+  display: block;
+  width: 50%;
+  right: 25%;
+  bottom: 2rem;
+  margin: 0 auto;
+}
+
+.moreheight {
+  height: 750px;
+}
+

@@ -1,0 +1,33 @@
+.login-layout {
+  background-image: url("../../../../assets/images/background/approval-background.jpg");
+  background-position: center;
+  height: 100vh;
+}
+
+.login-register {
+  height: auto;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, .9) !important;
+}
+
+.login-logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+.vf {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.container-fluid {
+  padding: 112px 0;
+}
